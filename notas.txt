@@ -10,6 +10,8 @@ src/
 │   └── Navbar.jsx          # Barra de navegación.
 ├── features/               # Módulos lógicos de la app (Redux slices, lógica)
 │   ├── products/           # Todo lo relacionado a productos (slice, API calls, etc.)
+│   │   ├── ProductCard.jsx
+│   │   └── ProductsList.jsx
 │   ├── cart/               # Carrito de compras
 │   └── user/               # Usuario / login
 ├── hooks/                  # Custom hooks (useFetch, useAuth, etc.) "Encapsular lógica que se repite"
