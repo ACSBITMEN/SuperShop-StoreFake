@@ -29,6 +29,9 @@ export default function ProductDetailPage() {
 
   return (
     <div className="p-6 max-w-3xl mx-auto">
+      <Link to="/" className="text-blue-500 hover:underline">
+        ← Volver
+      </Link>
       <img
         src={product.image}
         alt={product.title}
@@ -39,9 +42,6 @@ export default function ProductDetailPage() {
       <p className="text-lg mb-6">{product.description}</p>
       <p className="text-green-600 font-bold text-xl mb-4">${product.price}</p>
 
-      <Link to="/" className="text-blue-500 hover:underline">
-        ← Volver
-      </Link>
     </div>
   );
 }

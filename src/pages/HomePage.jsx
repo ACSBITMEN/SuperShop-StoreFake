@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { getProducts, getCategories, getProductsByCategory } from "../services/products";
 import ProductsList from "../features/products/ProductsList";
+import Carousel from "../components/Carousel";
 
 export default function HomePage() {
   const [products, setProducts] = useState([]);
@@ -55,6 +56,9 @@ export default function HomePage() {
 
   return (
     <div className="p-4">
+
+      <Carousel />
+
       <h1 className="text-xl font-bold mb-4">Lista de Productos</h1>
 
       {error && <p className="text-red-500 mb-4">{error}</p>}

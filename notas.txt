@@ -6,21 +6,23 @@ src/
 │   ├── ui/                 # Botones, cards, etc.
 │   │   └── Button.jsx      # Botones estandar reutilizable.
 │   ├── layouts/            # Wrappers globales
+│   │   └── MainLayout.jsx  # Layout (estructura basica 1)
+│   ├── Footer.jsx          # Carousel de imagenes
 │   ├── Footer.jsx          # Pie de pagina.
 │   └── Navbar.jsx          # Barra de navegación.
 ├── features/               # Módulos lógicos de la app (Redux slices, lógica)
 │   ├── products/           # Todo lo relacionado a productos (slice, API calls, etc.)
-│   │   ├── ProductCard.jsx
-│   │   └── ProductsList.jsx
+│   │   ├── ProductCard.jsx # Diseño y contenido de las cartas de productos
+│   │   └── ProductsList.jsx # Diseño y contenido de las Listas de cartas de productos
 │   ├── cart/               # Carrito de compras
 │   └── user/               # Usuario / login
 ├── hooks/                  # Custom hooks (useFetch, useAuth, etc.) "Encapsular lógica que se repite"
 │   ├── useFetch.js         # 
 │   └── useLocalStorage.js  # 
 ├── pages/                  # Páginas completas (Home, ProductDetailPage, CartPage, LoginPage)
-│   ├── HomePage.jsx        #
+│   ├── HomePage.jsx        # Bloque principal del contenido y visual de "Inicio"
 │   ├── ProductDetailPage.jsx #
-│   ├── CartPage.jsx        #
+│   ├── CartPage.jsx        # 
 │   └── LoginPage.jsx       #
 ├── routes/                 # Rutas
 │   ├── AppRouter.jsx       # Rutas principales
