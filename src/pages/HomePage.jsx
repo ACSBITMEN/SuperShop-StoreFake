@@ -55,30 +55,33 @@ export default function HomePage() {
   };
 
   return (
-    <div className="p-4">
+    <div className="w-full pb-4">
 
       <Carousel />
 
-      <h1 className="text-xl font-bold mb-4">Lista de Productos</h1>
+      <div className="container mx-auto">
+        <h1 className="text-xl font-bold mb-4">Lista de Productos</h1>
 
-      {error && <p className="text-red-500 mb-4">{error}</p>}
-      {isLoading && <p className="text-blue-500 mb-4">Cargando...</p>}
+        {error && <p className="text-red-500 mb-4">{error}</p>}
+        {isLoading && <p className="text-blue-500 mb-4">Cargando...</p>}
 
-      <select
-        value={selectedCategory}
-        onChange={(e) => setSelectedCategory(e.target.value)}
-        className="border p-2 mb-4 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-        disabled={isLoading}
-      >
-        <option value="all">Todas las categorías</option>
-        {categories.map((cat) => (
-          <option key={cat} value={cat}>
-            {formatCategoryName(cat)}
-          </option>
-        ))}
-      </select>
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="border p-2 mb-4 rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          disabled={isLoading}
+        >
+          <option value="all">Todas las categorías</option>
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>
+              {formatCategoryName(cat)}
+            </option>
+          ))}
+        </select>
 
-      {!isLoading && <ProductsList products={products} />}
+        {!isLoading && <ProductsList products={products} />}
+      </div>
+
     </div>
   );
 }
