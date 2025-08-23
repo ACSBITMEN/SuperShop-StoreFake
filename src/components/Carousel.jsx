@@ -51,7 +51,7 @@ export default function Carousel() {
         if (isAutoPlaying) {
             interval = setInterval(() => {
                 nextSlide();
-            }, 4000); // Cambian cada X segundos
+            }, 4500); // Cambian cada X segundos
         }
         return () => {
             if (interval) clearInterval(interval);
@@ -60,7 +60,7 @@ export default function Carousel() {
 
     return (
         <div 
-            className="relative w-full h-[35rem] overflow-hidden rounded-sm mb-8"
+            className="relative w-full h-[30rem] overflow-hidden rounded-sm mb-8"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
@@ -91,7 +91,7 @@ export default function Carousel() {
             {/* Botones de navegación left y right */}
             <button
                 onClick={prevSlide}
-                className={`absolute text-xl left-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-black px-5 py-4 rounded-r-full transition-all duration-300 z-30 ${
+                className={`absolute text-xl left-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-stone-700 px-5 py-4 rounded-r-full transition-all duration-300 z-30 ${
                     isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 }`}
                 disabled={transitioning}
@@ -100,7 +100,7 @@ export default function Carousel() {
             </button>
             <button
                 onClick={nextSlide}
-                className={`absolute text-xl right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-black px-5 py-4 rounded-l-full transition-all duration-300 z-30 ${
+                className={`absolute text-xl right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-stone-700 px-5 py-4 rounded-l-full transition-all duration-300 z-30 ${
                     isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 }`}
                 disabled={transitioning}
@@ -111,7 +111,7 @@ export default function Carousel() {
             {/* Botón de play/pause */}
             <button
                 onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                className={`absolute top-4 left-4 bg-white/50 hover:bg-white text-black p-2 rounded-full transition-all duration-300 z-30 ${
+                className={`absolute top-4 left-4 bg-white/50 hover:bg-white text-stone-700 p-2 rounded-full transition-all duration-300 z-30 ${
                     isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 }`}
             >
