@@ -90,7 +90,7 @@ export default function SearchFilters({ categories, searchParams, setSearchParam
           />
           <button
             type="submit"
-            className="bg-amber-600 text-white px-4 rounded-md h-10 hover:bg-amber-700"
+            className="bg-amber-500 text-white px-4 rounded-md h-10 hover:bg-amber-600"
           >
             Buscar
           </button>
@@ -120,7 +120,7 @@ export default function SearchFilters({ categories, searchParams, setSearchParam
           </div>
           <button
             onClick={handlePriceChange}
-            className="bg-amber-600 text-white px-3 rounded-md h-10 self-end hover:bg-amber-700"
+            className="bg-amber-500 text-white px-3 rounded-md h-10 self-end hover:bg-amber-600"
           >
             OK
           </button>
